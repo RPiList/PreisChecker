@@ -39,18 +39,18 @@ def doyourmagic(soup,Kennung,htmltag1,htmltag2,htmltag3,aschalter,maxpreis,histo
             case 1:
                 # Preis unter selbstgewählter Preisgrenze
                 if neupreis < maxpreis:
-                    print(Kennung + ' für ' + neupreisstr)
-                    #os.system(befehl)
+                    #print(Kennung + ' für ' + neupreisstr)
+                    os.system(befehl)
             case 2:
                 # Preisverfall in %
                 if neupreis <= altpreis * (maxpreis/100):
-                    print(Kennung + ' für ' + neupreisstr)
-                    #os.system(befehl)
+                    #print(Kennung + ' für ' + neupreisstr)
+                    os.system(befehl)
             case 3:
                 # Neupreis unter Altpreis
                 if neupreis < altpreis:   
-                    print(Kennung + ' für ' + neupreisstr)
-                    #os.system(befehl)
+                    #print(Kennung + ' für ' + neupreisstr)
+                    os.system(befehl)
     # Daten werden auch in die History-Dateien geschrieben
     if history == "1":
         with open('history/' + Kennung + '.csv', 'a') as fp:
