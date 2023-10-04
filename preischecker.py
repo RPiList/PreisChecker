@@ -30,7 +30,7 @@ def doyourmagic(soup,Kennung,htmltag1,htmltag2,htmltag3,aschalter,maxpreis,histo
     with open(datei, 'w') as fp:
         datum = datetime.now()
         dt_string = datum.strftime("%d.%m.%Y %H:%M:%S")
-        neupreis = float(preis.replace(',','.').replace('€','').replace('-','0').replace('EUR','').strip())
+        neupreis = float(preis.replace('.','').replace(',','.').replace('€','').replace('-','0').replace('EUR','').strip())
         neupreisstr = "{:.2f}".format(neupreis).replace('.', decimalinhistory)
         zeile = dt_string + " " + neupreisstr
         fp.write(zeile)
